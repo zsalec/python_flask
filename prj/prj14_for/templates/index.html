@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For</title>
+</head>
+<body>
+{% for k,v in user.items() %}
+    <p>{{ k }}: {{ v }}</p>
+{% endfor %}
+    <ol>
+{% for website in websites %}
+        <li>{{ website }}</li>
+{% endfor %}
+    </ol>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Price</th>
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{ book.name }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.price }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

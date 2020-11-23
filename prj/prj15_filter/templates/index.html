@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+</head>
+<body>
+    <img src="{{ avatar | default('https://yichengzhang.cn/uploads/croppedImg_27777.png') }}" alt="avatar">
+    <img src="{{ avatar1 | default('https://yichengzhang.cn/uploads/croppedImg_27777.png') }}" alt="avatar1">
+    <hr>
+    <p>Comments: ({{ comments | length }})</p>
+    <ul>
+        {% for comment in comments %}
+        <li>
+            <a href="#">{{ comment.user }}</a>
+            <p>{{ comment.content }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

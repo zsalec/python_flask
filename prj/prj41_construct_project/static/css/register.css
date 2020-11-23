@@ -1,0 +1,9 @@
+.form-content {
+    width: 300px;
+    margin: auto;
+}
+.error-msg {
+    color: red;
+    font-weight: bold;
+    font-size: 10px;
+}

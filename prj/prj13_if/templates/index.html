@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If</title>
+</head>
+<body>
+{% if user %}
+    <span>name: {{ user.username }}</span><br>
+    <span>age: {{ user['age'] }}</span><br>
+    {% if user.age > 18 %}
+        <span>Welcome, friend</span>
+    {% else %}
+        <span>Hello, boy</span>
+    {% endif %}
+{% else %}
+    <a href="#">Login</a>
+    <a href="#">Regist</a>
+{% endif %}
+</body>
+</html>
